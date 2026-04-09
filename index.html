@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Prediction System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">TPS</div>
+  <h1>🌍 Travel Prediction System</h1>
+  <div class="auth-icons">
+    <span class="auth-icon" title="Register">📝 Register</span>
+    <span class="auth-icon" title="Login">👤 Log In</span>
+  </div>
+</header>
+
+<div class="slideshow-container">
+  <div class="slide fade">
+    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&h=400&fit=crop" alt="Hotel" class="slide-image">
+  </div>
+  <div class="slide fade">
+    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=400&fit=crop" alt="Mount Kilimanjaro" class="slide-image">
+  </div>
+  <div class="slide fade">
+    <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=1200&h=400&fit=crop" alt="Airplane" class="slide-image">
+  </div>
+</div>
+
+<div class="tagline-container lower-tagline">
+  <p class="tagline floating">Smart Travel Decisions Within Your Budget.</p>
+</div>
+
+<div class="container">
+  <div class="form">
+    <input type="text" id="country" placeholder="Enter Country of Origin">
+    <input type="number" id="budget" placeholder="Enter Budget ($)">
+    <button onclick="predict()">Get Recommendations</button>
+  </div>
+
+  <div id="results" class="results"></div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Travel Destination Predictor. All rights reserved.</p>
+  <div class="footer-icons">
+    <span class="footer-icon" title="About" id="aboutBtn">ℹ️ About</span>
+  </div>
+</footer>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Log In</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit">Log In</button>
+      <button type="button" class="google-btn" onclick="alert('Google login coming soon')">
+        <span class="google-icon">🔴</span>
+        Continue with Google
+      </button>
+    </form>
+    <p id="loginMessage"></p>
+  </div>
+</div>
+
+<!-- Register Modal -->
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="text" id="registerName" placeholder="Full Name" required>
+      <input type="email" id="registerEmail" placeholder="Email" required>
+      <input type="password" id="registerPassword" placeholder="Password" required>
+      <input type="password" id="registerConfirmPassword" placeholder="Confirm Password" required>
+      <button type="submit">Register</button>
+      <button type="button" class="google-btn" onclick="alert('Google signup coming soon')">
+        <span class="google-icon">🔴</span>
+        Continue with Google
+      </button>
+    </form>
+    <p id="registerMessage"></p>
+  </div>
+</div>
+
+<!-- About Modal -->
+<div id="aboutModal" class="modal">
+  <div class="modal-content about-modal">
+    <span class="close">&times;</span>
+    <h2>About Travel Prediction System</h2>
+    
+    <div class="about-content">
+      <section class="about-section">
+        <h3>🌍 Our Mission</h3>
+        <p>The Travel Prediction System (TPS) helps travelers discover their perfect destinations based on their budget and origin country. We use intelligent algorithms to match travelers with affordable and suitable travel options across Africa and beyond.</p>
+      </section>
+      
+      <section class="about-section">
+        <h3>✈️ What We Offer</h3>
+        <ul>
+          <li>Personalized destination recommendations</li>
+          <li>Budget-based travel planning</li>
+          <li>Real-time travel insights</li>
+          <li>User account management</li>
+          <li>Comprehensive travel database</li>
+        </ul>
+      </section>
+      
+      <section class="about-section">
+        <h3>📊 System Features</h3>
+        <ul>
+          <li>Advanced destination matching algorithm</li>
+          <li>Secure user authentication</li>
+          <li>Responsive design for all devices</li>
+          <li>Real-time slideshow backgrounds</li>
+          <li>Interactive user interface</li>
+        </ul>
+      </section>
+      
+      <section class="about-section">
+        <h3>📞 Contact Information</h3>
+        <div class="contact-info">
+          <p><strong>Email:</strong> info@travelpredictionsystem.com</p>
+          <p><strong>Phone:</strong> +254729598695</p>
+          <p><strong>Address:</strong> 123 Travel Street, Adventure City, AC 12345</p>
+          <p><strong>Support:</strong> support@tps.com</p>
+        </div>
+      </section>
+      
+      <section class="about-section">
+        <h3>🕒 Business Hours</h3>
+        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+        <p>Saturday: 10:00 AM - 4:00 PM</p>
+        <p>Sunday: Closed</p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
 
